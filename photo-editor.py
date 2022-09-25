@@ -44,12 +44,12 @@ def add_filter(imgs, src_path):
 
         # CC
         ClrEnhancer = ImageEnhance.Color(ShOutput)
-        ClrFactor = 1.15
+        ClrFactor = 1.25
         ClrOutput = ClrEnhancer.enhance(ClrFactor)
 
         # Contrast
         ConEnhancer = ImageEnhance.Color(ClrOutput)
-        ConFactor = 1.3
+        ConFactor = 1.4
         ConOutput = ConEnhancer.enhance(ConFactor)
 
         # Blur
@@ -63,6 +63,7 @@ def add_filter(imgs, src_path):
 
         img_output.save(file_name+"_edited.png", "png",
                         optimize=True, quality=80)
+    print('Done! Check the "output" folder to see your edited photos.')
 
 
 check_for_folders('.\import', '.\output')
