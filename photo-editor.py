@@ -34,7 +34,7 @@ def add_filter(imgs, src_path):
 
         # Brightness
         BrEnhancer = ImageEnhance.Brightness(SzOutput)
-        BrFactor = 1.1
+        BrFactor = 1.05
         BrOutput = BrEnhancer.enhance(BrFactor)
 
         # Sharpness
